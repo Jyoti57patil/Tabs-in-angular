@@ -1,0 +1,72 @@
+<div class="tab-container">
+  <div class="container">
+    <ul class="tablinks">
+      <li>
+        <a
+          href="#home"
+          class="active"
+          id="home"
+          (click)="ontabchange('home')"
+          [ngClass]="{ active: tabs == 'home' }"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="#profile"
+          id="profile"
+          (click)="ontabchange('profile')"
+          [ngClass]="{ active: tabs == 'profile' }"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          id="contact"
+          (click)="ontabchange('contact')"
+          [ngClass]="{ active: tabs == 'contact' }"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <!--tab links-->
+
+    <div class="tabs">
+      <div class="tab" *ngIf="tabs === 'home'">
+        <h3>Starting Home information</h3>
+        <p>
+          This is some placeholder content the Home tab's associated content.
+          Clicking another tab will toggle the visibility of this one for the
+          next. The tab JavaScript swaps classes to control the content
+          visibility and styling. You can use it with tabs, pills, and any other
+          .nav-powered navigation.
+        </p>
+      </div>
+
+      <div class="tab" *ngIf="tabs === 'profile'">
+        <h1>Profile</h1>
+        <p>
+          Profile this is some placeholder content the Home tab's associated
+          content. Clicking another tab will toggle the visibility of this one
+          for the next. The tab JavaScript swaps classes to control the content
+          visibility and styling. You can use it with tabs, pills, and any other
+          .nav-powered navigation.
+        </p>
+      </div>
+
+      <div class="tab" *ngIf="tabs === 'contact'">
+        <h1>Contact</h1>
+        <p>
+          Contact this is some placeholder content the Home tab's associated
+          content. Clicking another tab will toggle the visibility of this one
+          for the next. The tab JavaScript swaps classes to control the content
+          visibility and styling. You can use it with tabs, pills, and any other
+          .nav-powered navigation.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--container-->
+</div>
+<!--tab container-->
